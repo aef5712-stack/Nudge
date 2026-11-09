@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nudge — Plan your days, finish your tasks</title>
+<meta name="description" content="Nudge helps you track habits, build daily, weekly and monthly to-do lists, and uses AI to turn syllabuses and calendars into a schedule you can actually finish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#fbfaf7;--ink:#1d1b22;--muted:#5f5b68;--card:#fff;--line:#e8e4dc;--accent:#5b4bdb;--accent-soft:#ece9ff;--ok:#1f9d6b}
+  @media (prefers-color-scheme:dark){:root{--bg:#141318;--ink:#f2f0f6;--muted:#a9a4b5;--card:#1d1b23;--line:#2e2b36;--accent:#9d91ff;--accent-soft:#2a2550;--ok:#4fd19c}}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .logo{font-weight:800;font-size:1.5rem;letter-spacing:-.03em}
+  .logo span{color:var(--accent)}
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:48px 0 72px}
+  h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 18px}
+  .lede{font-size:1.15rem;color:var(--muted);margin:0 0 28px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none}
+  .mock{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+  .mock h3{margin:0 0 12px;font-size:.95rem;color:var(--muted);font-weight:600}
+  .task{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .task:last-child{border:0}
+  .box{width:18px;height:18px;border-radius:5px;border:2px solid var(--line);flex:none}
+  .done .box{background:var(--ok);border-color:var(--ok)}
+  .done span{text-decoration:line-through;color:var(--muted)}
+  .time{margin-left:auto;font-size:.8rem;color:var(--muted)}
+  .nudge{margin-top:14px;background:var(--accent-soft);border-radius:10px;padding:10px 12px;font-size:.88rem}
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 8px}
+  .sub{color:var(--muted);margin:0 0 32px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h3{margin:0 0 6px;font-size:1.1rem}
+  .card p{margin:0;color:var(--muted);font-size:.95rem}
+  .tier.pro{border:2px solid var(--accent)}
+  .tag{display:inline-block;font-size:.75rem;font-weight:600;background:var(--accent-soft);color:var(--accent);padding:3px 9px;border-radius:99px;margin-bottom:10px}
+  .tier ul{padding-left:18px;margin:10px 0 0;color:var(--muted);font-size:.95rem}
+  footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:.95rem}
+  footer strong{color:var(--ink)}
+  @media (max-width:760px){.hero,.grid{grid-template-columns:1fr}.hero{padding-top:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><div class="logo">nudge<span>.</span></div><a class="btn" href="#plans">See plans</a></nav>
+
+  <header class="hero">
+    <div>
+      <h1>The gentle push that gets every task done on time.</h1>
+      <p class="lede">Nudge is a habit tracker and time manager. It builds your daily, weekly and monthly to-do lists and calendars, and its AI turns your syllabuses, deadlines and commitments into a schedule you can actually finish.</p>
+      <a class="btn" href="#how">How it works</a>
+    </div>
+    <div class="mock" aria-label="Example daily list">
+      <h3>Today · Monday</h3>
+      <div class="task done"><div class="box"></div><span>Morning run</span><span class="time">7:00</span></div>
+      <div class="task done"><div class="box"></div><span>Read ch. 4 for Bio</span><span class="time">9:30</span></div>
+      <div class="task"><div class="box"></div><span>Draft history essay intro</span><span class="time">1:00</span></div>
+      <div class="task"><div class="box"></div><span>Calc problem set 6</span><span class="time">3:30</span></div>
+      <div class="task"><div class="box"></div><span>Drink 8 glasses of water</span><span class="time">all day</span></div>
+      <div class="nudge">👋 <strong>Nudge:</strong> Your essay is due Thursday. 45 minutes today keeps you on track.</div>
+    </div>
+  </header>
+
+  <section id="how">
+    <h2>What Nudge does</h2>
+    <p class="sub">One place for your habits, your tasks and your time.</p>
+    <div class="grid">
+      <div class="card"><h3>Daily, weekly and monthly lists</h3><p>Plan the day, see the week, and keep the month in view. Unfinished tasks roll forward so nothing slips.</p></div>
+      <div class="card"><h3>Calendars and habit tracking</h3><p>See every deadline on a calendar and build streaks for the habits you want to keep.</p></div>
+      <div class="card"><h3>AI scheduling</h3><p>Upload a syllabus, a calendar or a list of tasks. Nudge's AI reads it, finds the deadlines and builds a realistic schedule around your week.</p></div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <h2>Plans</h2>
+    <p class="sub">Start free. Upgrade when you need more.</p>
+    <div class="grid">
+      <div class="card tier"><span class="tag">Basic</span><h3>Free</h3><p>Get organized with the essentials.</p>
+        <ul><li>A limited number of to-do lists</li><li>Daily, weekly and monthly views</li><li>Habit tracking</li></ul></div>
+      <div class="card tier pro"><span class="tag">Pro</span><h3>Unlimited</h3><p>For people juggling a lot at once.</p>
+        <ul><li>Unlimited to-do lists</li><li>Unlimited calendars</li><li>Everything in Basic</li></ul></div>
+      <div class="card tier"><span class="tag">AI</span><h3>Nudge AI</h3><p>Let Nudge plan for you.</p>
+        <ul><li>Upload syllabuses, calendars and tasks</li><li>AI-built schedules that hit every deadline</li><li>Everything in Pro</li></ul></div>
+    </div>
+  </section>
+
+  <footer>Built by <strong id="author">Addison Frauenberg</strong> · Nudge, 2026</footer>
+</div>
+</body>
+</html>
